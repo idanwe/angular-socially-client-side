@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="/">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="socially">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div>
+      {{$root.currentUser.emails[0].address}}
+      <h1>
+        <a href="/parties">Home</a>
+      </h1>
+      <div ui-view></div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script src="scripts/lib/ddp-remote-connection.js"></script>
+
+    <script src="scripts/lib/meteor-platform-no-ui.min.js"></script>
+
+    <!-- angular-meteor dependencies -->
+    <script src="scripts/packages/observe-sequence.js"></script>
+    <script src="scripts/packages/lai_collection-extensions.js"></script>
+    <script src="scripts/packages/dburles_mongo-collection-instances.js"></script>
+    <script src="scripts/packages/urigo_angular.js"></script>
+    <!-- endangular-meteor -->
+
+
+    <!-- accounts-password dependencies -->
+    <script src="scripts/accounts-password/callback-hook.js"></script>
+    <script src="scripts/accounts-password/localstorage.js"></script>
+    <script src="scripts/accounts-password/accounts-base.js"></script>
+    <script src="scripts/accounts-password/service-configuration.js"></script>
+    <script src="scripts/accounts-password/sha.js"></script>
+    <script src="scripts/accounts-password/srp.js"></script>
+    <script src="scripts/accounts-password/accounts-password.js"></script>
+    <!-- endaccounts-password -->
+
+
+    <script src="scripts/lib/tmeasday_publish-counts-client.js"></script>
+
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- endbuild -->
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/colletions.js"></script>
+        <script src="scripts/routes.js"></script>
+        <script src="scripts/parties/controllers/partiesList.js"></script>
+        <script src="scripts/parties/controllers/partyDetails.js"></script>
+        <script src="scripts/parties/filters/displayName.js"></script>
+        <script src="scripts/parties/filters/uninvited.js"></script>
+</body>
+</html>
