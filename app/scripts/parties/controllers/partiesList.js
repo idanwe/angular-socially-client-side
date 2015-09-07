@@ -1,13 +1,21 @@
 angular.module("socially").controller("PartiesListCtrl", ['$scope', '$meteor', '$rootScope',
   function($scope, $meteor, $rootScope){
 
+    $scope.data = {};
+
+    $scope.login = function () {
+      var email = $scope.data.email;
+      var password = $scope.data.password;
+      $meteor.loginWithPassword(email, password);
+    };
+
     $scope.page = 1;
     $scope.perPage = 3;
     $scope.sort = { name: 1 };
     $scope.orderProperty = '1';
 
     $scope.users = $meteor.collection(Meteor.users, false).subscribe('users');
-    
+
     $scope.parties = $meteor.collection(function() {
       return Parties.find({}, {
         sort : $scope.getReactively('sort')

@@ -10,6 +10,9 @@
 </form>
 <div ng-hide="$root.currentUser || $root.loggingIn">
   Log in to create a party!
+  <input ng-model="data.email" type="text" placeholder="Email">
+  <input ng-model="data.password" type="text" placeholder="Password">
+  <button ng-click="login()" type="button">Login</button>
 </div>
 <ul>
   <h1>Parties:</h1>
