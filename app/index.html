@@ -55,50 +55,23 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script src="scripts/lib/ddp-remote-connection.js"></script>
+    <script src="bower_components/meteor-client-side/meteor-runtime-config.js"></script>
+    <script src="bower_components/meteor-client-side/meteor-client-side.min.js"></script>
 
-    <!-- meteor-platfrom (without jquery, fastclick, blaze, autoupdate, session, ui, deps, templating, livedata, mobile-status-bar, launch-screen, spacebars, webapp)  -->
-    <!-- <script src="scripts/packages/underscore.js"></script>
-    <script src="scripts/packages/meteor.js"></script>
-    <script src="scripts/packages/base64.js"></script>
-    <script src="scripts/packages/json.js"></script>
-    <script src="scripts/packages/ejson.js"></script>
-    <script src="scripts/packages/check.js"></script>
-    <script src="scripts/packages/random.js"></script>
-    <script src="scripts/packages/tracker.js"></script>
-    <script src="scripts/packages/retry.js"></script>
-    <script src="scripts/packages/id-map.js"></script>
-    <script src="scripts/packages/ordered-dict.js"></script>
-    <script src="scripts/packages/geojson-utils.js"></script>
-    <script src="scripts/packages/minimongo.js"></script>
-    <script src="scripts/packages/logging.js"></script>
-    <script src="scripts/packages/ddp.js"></script>
-    <script src="scripts/packages/mongo.js"></script>
-    <script src="scripts/packages/global-imports.js"></script> -->
-    <!-- endmeteor-platform -->
-    <script src="scripts/lib/meteor-platform-no-ui.min.js"></script>
-
-    <!-- angular-meteor dependencies -->
-    <script src="scripts/packages/observe-sequence.js"></script>
-    <script src="scripts/packages/lai_collection-extensions.js"></script>
-    <script src="scripts/packages/dburles_mongo-collection-instances.js"></script>
-    <script src="scripts/packages/urigo_angular.js"></script>
-    <!-- endangular-meteor -->
+    <script src="bower_components/accounts-password-client-side/packages/callback-hook.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/localstorage.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/accounts-base.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/service-configuration.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/sha.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/srp.js"></script>
+    <script src="bower_components/accounts-password-client-side/packages/accounts-password.js"></script>
 
 
-    <!-- accounts-password dependencies -->
-    <script src="scripts/accounts-password/callback-hook.js"></script>
-    <script src="scripts/accounts-password/localstorage.js"></script>
-    <script src="scripts/accounts-password/accounts-base.js"></script>
-    <script src="scripts/accounts-password/service-configuration.js"></script>
-    <script src="scripts/accounts-password/sha.js"></script>
-    <script src="scripts/accounts-password/srp.js"></script>
-    <script src="scripts/accounts-password/accounts-password.js"></script>
-    <!-- endaccounts-password -->
+    <script src="scripts/lib/angular-meteor.bundle.min.js"></script>
+    <!-- TODO SHOULD BE BOWER angular-meteor -->
 
 
     <script src="scripts/lib/tmeasday_publish-counts-client.js"></script>
-
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <!-- endbuild -->
